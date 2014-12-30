@@ -11,28 +11,22 @@
 
 	<title>Node/Angular Todo app</title>
  
- 
 	<script src="script.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"><!-- load bootstrap -->
-	<style>
-	    html                    { overflow-y:scroll; }
-	    body                    { padding-top:50px; }
-	    #todo-list              { margin-bottom:30px; }
-	</style>
 	
-	<link rel="stylesheet" href="style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.8/angular.js"></script>
-    <script src="script.js"></script>
+	<link rel="stylesheet" href="style.css" /><!-- styles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.8/angular.js"></script><!-- load angularjs -->
+    <script src="script.js"></script><!-- controller js -->
 </head>
 
 <body ng-app="Todo">
     <div class="container" ng-controller="TodoCtrl">
-         <!-- HEADER AND TODO COUNT -->
+         <!-- todo count -->
         <div class="text-center">
             <h2>Todo Task List <span class="label label-info">{{ todos.length }}</span></h2>
         </div>
 
-		<ul class="todo-list" ng-repeat="todo in todos track by $index">
+		<ul class="todo-list" ng-repeat="todo in todos track by $index"> <!-- list of todo's -->
 	        <li>
 	          <span>{{ todo }}</span>
 	          <button class="bt bt-achieve" ng-click="done(todo)">Task completed</button>
@@ -41,7 +35,7 @@
 
 		<ul class="add-todo">
 			<li>
-			  <input type="text" class="txt" placeholder="Add a new task here" ng-model="newTodo" ng-keyup="add($event)"  />
+			  <input type="text" class="txt" placeholder="Add a new task here, press enter when done." ng-model="newTodo" ng-keyup="add($event)"  /><!-- add new todo -->
 			</li>
 		</ul>
   

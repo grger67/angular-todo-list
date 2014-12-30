@@ -1,8 +1,6 @@
-* {
-  box-sizing: border-box;
-  font-family: 'Roboto', Arial;
-  color: #95e2aa;
-  font-weight: 100;
+
+html{
+ overflow-y:scroll; 
 }
 
 html, body {
@@ -11,32 +9,32 @@ html, body {
 }
 
 body {
-  background: #444;
-}
-
-.rebel {
-  color: #ff6450;
-}
-
-.achieve {
-  color: #9dc9a8;
+  background: #fff;
+  padding-top:12px;
 }
 
 .bt {
-  width: auto;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
-.bt.bt-rebel {
-  background: #ff6450;
+  display: inline-block;
+  min-width: 140px;
+  font-family: "museo-sans-condensed", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
   color: #fff;
+  padding: 8px 20px;
+  background: #dc5925;
+  cursor: pointer;
+  width: auto;
+  border: 1px solid #ccc;
+  outline: none;
+  border-left:none;
 }
 
-.bt.bt-achieve {
-  background: #9dc9a8;
-  color: #444349;
+.bt.bt-achieve:hover {
+  color: #444;
 }
 
 .txt {
@@ -45,10 +43,20 @@ body {
   outline: none;
   padding: 10px;
   margin: 4px 0;
-  border: 1px solid #9dc9a8;
+  border: 1px solid #ccc;
   width: 90%;
   font-size: 16px;
   position: relative;
+  color:#444;
+}
+
+.text-center{
+  padding-bottom:8px;
+}
+
+.text-center h2{
+  font-size: 36px;
+  color: #999;
 }
 
 .page-container {
@@ -56,16 +64,12 @@ body {
   margin: 0 auto;
 }
 
-.page-container h2 {
-  text-align: center;
-  font-weight: 900;
-}
-
 .add-todo .txt {
   padding: 10px;
 }
 
-.todo-list, .add-todo {
+.todo-list, 
+.add-todo {
   list-style-type: none;
   text-align: left;
 }
@@ -73,10 +77,12 @@ body {
 .todo-list li {
   padding: 10px;
   margin: 4px 0;
-  border: 1px solid #9dc9a8;
+  border: 1px solid #ccc;
   width: 90%;
   position: relative;
   cursor: pointer;
+  background-color: #efefef;
+  min-height:40px;
 }
 
 .todo-list li .bt {
@@ -89,4 +95,22 @@ body {
 
 .todo-list li .bt:hover {
   width: auto;
+}
+
+.label {
+  display: inline;
+  padding: 8px 14px;
+  font-size: 80%;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 6px;
+}
+
+.label-info {
+  background-color: #335877;
+  font-family: "museo-sans-condensed", Arial, Helvetica, sans-serif;
 }
